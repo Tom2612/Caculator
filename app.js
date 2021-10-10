@@ -3,19 +3,19 @@ topScreenText.textContent = '';
 
 function add(a, b) {
     return a + b;
-}
+};
 
 function subtract(a, b) {
     return a - b;
-}
+};
 
 function multiply(a, b) {
     return a * b;
-}
+};
 
 function divide(a, b) {
     return a / b;
-}
+};
 
 function operation(num1, operator, num2) {
     if (operator === '+') {
@@ -28,3 +28,6 @@ function operation(num1, operator, num2) {
         return divide(num1, num2);
     }
 };
+
+let display = document.querySelector('.bottom');
+display.textContent = '0000';
