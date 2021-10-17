@@ -7,6 +7,7 @@ const displayBottom = document.querySelector('.bottom');
 const equal = document.querySelector('#equal');
 const numberButtons = document.querySelectorAll('.num');
 const operatorButtons = document.querySelectorAll('.operator');
+const clearBtn = document.querySelector('#clear');
 
 function add(a, b) { return a + b };
 function subtract(a, b) { return a - b };
@@ -37,6 +38,13 @@ function getDisplay() {
 function clearDisplay() {
     displayBottom.textContent = '';
 };
+
+function clearAll() {
+    displayBottom.textContent = '';
+    num1 = null;
+    num2 = null;
+    operator = null;
+}
 
 //Assign num values
 function setNumbers(value) {
@@ -98,3 +106,5 @@ equal.addEventListener('click', () => {
         setDisplay(result);
     }
 });
+
+clearBtn.addEventListener('click', clearAll);
